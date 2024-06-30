@@ -1,0 +1,1 @@
+My idea is that I can create a word game that does not need 3d modeling, like hangman.
