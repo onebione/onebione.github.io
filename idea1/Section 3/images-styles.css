@@ -40,10 +40,12 @@ h1 {
     font-size: 35px;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 .sentence-seg {
     margin-left: 10px;
     margin-right: 10px;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
