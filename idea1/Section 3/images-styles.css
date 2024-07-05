@@ -43,9 +43,16 @@ h1 {
     margin-bottom: 15px;
 }
 .sentence-seg {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+}
+.space {
+    background-color: transparent;
+    color: transparent; /* Ensure text is also invisible */
+    display: inline-block; /* You can change this to block if needed */
+    width: 35px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
 }
