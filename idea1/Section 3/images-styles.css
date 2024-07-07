@@ -56,3 +56,22 @@ h1 {
     width: 35px; /* Adjust width as needed */
     height: 50px; /* Adjust height as needed */
 }
+.SubmitButton {
+    background-color: #4CAF50; /* Background color */
+    color: white;              /* Text color */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Font family */
+    font-size: 20px;           /* Font size */
+    padding: 10px 20px;        /* Padding */
+    border: none;              /* Remove border */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;           /* Cursor on hover */
+}
+
+.SubmitButton:hover {
+    background-color: #45a549; /* Background color on hover */
+}
+
+.Title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 1px;
+}

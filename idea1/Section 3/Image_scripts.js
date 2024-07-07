@@ -1,4 +1,4 @@
-const sentence = "Huge juicy balls"; // Replace with your actual sentence
+const sentence = "OOOOOO";
 
 function createElementsFromSentence(sentence) {
     const container = document.getElementById('textarea-container');
@@ -19,12 +19,10 @@ function createElementsFromSentence(sentence) {
     });
 }
 
-// Function to add event listeners to textareas
 function addEventListeners() {
     const textareas = Array.from(document.querySelectorAll('.letter-textarea'));
     textareas.forEach((textarea, index) => {
-        // Event listener for input
-        textarea.addEventListener('input', function(event) {
+        textarea.addEventListener('input', function() {
             if (textarea.value.length > 1) {
                 textarea.value = textarea.value.charAt(0);
             }
@@ -33,7 +31,6 @@ function addEventListeners() {
             }
         });
 
-        // Event listener for keydown
         textarea.addEventListener('keydown', function(event) {
             if (event.key === 'Backspace' && textarea.value.length === 0 && index > 0) {
                 textareas[index - 1].focus();
@@ -42,19 +39,23 @@ function addEventListeners() {
     });
 }
 
-// Call the function to create elements and add event listeners on page load
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
     addEventListeners();
 });
 
-// JavaScript to restrict input -- doesn't work tho
-const textarea = document.getElementById('single-letter-textarea');
+document.getElementById('textarea-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-textarea.addEventListener('input', function(event) {
-            // Remove any non-alphanumeric characters
-    const cleanValue = this.value.replace(/[^a-zA-Z0-9]/g, '');
-    if (this.value !== cleanValue) {
-        this.value = cleanValue;
+    const textareas = document.querySelectorAll('.letter-textarea');
+    let textareaValues = '';
+    textareas.forEach((textarea) => {
+        textareaValues += textarea.value || ' ';
+    });
+
+    if (textareaValues === sentence) {
+        alert('Success! The input matches the sentence.');
+    } else {
+        alert('The input does not match the sentence.');
     }
 });
