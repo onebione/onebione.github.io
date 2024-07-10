@@ -41,6 +41,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 15px;
+    margin-right: 5px;
 }
 .sentence-seg {
     margin-left: 20px;
@@ -48,7 +49,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    justify-content: center; /* Centers elements horizontally */
+    align-items: center; /* Centers elements vertically */
 }
+
 .space {
     background-color: transparent;
     color: transparent; /* Ensure text is also invisible */
@@ -65,6 +69,7 @@ h1 {
     border: none;              /* Remove border */
     border-radius: 5px;        /* Rounded corners */
     cursor: pointer;           /* Cursor on hover */
+    margin-top: 15px;
 }
 
 .SubmitButton:hover {
@@ -74,4 +79,25 @@ h1 {
 .Title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 1px;
+}
+
+.invalid-input {
+    border: 2px solid red;
+}
+.valid-input {
+    border: 2px solid green;
+}
+.word-span {
+    display: flex;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.3s;
 }
