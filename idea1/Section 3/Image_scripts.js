@@ -2,7 +2,7 @@ const sentence = "This is sentence";
 
 function createElementsFromSentence(sentence) {
     const container = document.getElementById('textarea-container');
-    container.innerHTML = ''; // Clear the container
+    container.innerHTML = '';
 
     sentence.split(' ').forEach((word, wordIndex) => {
         const wordSpan = document.createElement('span');
@@ -19,7 +19,7 @@ function createElementsFromSentence(sentence) {
 
         const spaceSpan = document.createElement('span');
         spaceSpan.className = 'space';
-        spaceSpan.innerHTML = '&nbsp;'; // Non-breaking space for visibility
+        spaceSpan.innerHTML = '&nbsp;';
         container.appendChild(wordSpan);
         container.appendChild(spaceSpan);
     });
@@ -33,9 +33,20 @@ function addEventListeners() {
             const wordIndex = textarea.dataset.wordIndex;
             const charIndex = textarea.dataset.charIndex;
 
-            if (event.key === 'Backspace' && textarea.value.length === 0) {
-                focusPreviousTextarea(wordIndex, charIndex);
-            } else if (textarea.value.length === 1) {
+            // Prevent spaces and enters
+            if (event.key === ' ' || event.key === 'Enter') {
+                event.preventDefault();
+                return;
+            }
+
+            if (event.key === 'Backspace') {
+                if (textarea.value.length === 0) {
+                    focusPreviousTextarea(wordIndex, charIndex, true);
+                } else {
+                    textarea.value = '';
+                }
+                event.preventDefault();
+            } else if (textarea.value.length === 1 && event.key !== 'Backspace') {
                 focusNextTextarea(wordIndex, charIndex);
             }
         });
@@ -43,7 +54,7 @@ function addEventListeners() {
 
     const form = document.getElementById('textarea-form');
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting
+        event.preventDefault();
         validateSentence();
     });
 }
@@ -60,6 +71,7 @@ function validateSentence() {
             if (userChar.toUpperCase() === originalChar.toUpperCase()) {
                 textarea.classList.remove('invalid-input', 'shake');
                 textarea.classList.add('valid-input');
+                textarea.disabled = true; // Disable valid input
             } else {
                 textarea.classList.add('invalid-input', 'shake');
                 textarea.classList.remove('valid-input');
@@ -87,18 +99,26 @@ function focusNextTextarea(wordIndex, charIndex) {
     }
 }
 
-function focusPreviousTextarea(wordIndex, charIndex) {
+function focusPreviousTextarea(wordIndex, charIndex, backspace) {
     const prevCharIndex = parseInt(charIndex) - 1;
     const prevTextarea = document.querySelector(`.letter-textarea[data-word-index='${wordIndex}'][data-char-index='${prevCharIndex}']`);
     
     if (prevTextarea) {
-        prevTextarea.focus();
+        if (!prevTextarea.disabled) {
+            prevTextarea.focus();
+            if (backspace) prevTextarea.value = '';
+        } else {
+            focusPreviousTextarea(wordIndex, prevCharIndex, backspace); // Recursively focus previous
+        }
     } else {
         const prevWordIndex = parseInt(wordIndex) - 1;
         const lastTextareaPrevWord = document.querySelector(`.letter-textarea[data-word-index='${prevWordIndex}']:last-of-type`);
         
-        if (lastTextareaPrevWord) {
+        if (lastTextareaPrevWord && !lastTextareaPrevWord.disabled) {
             lastTextareaPrevWord.focus();
+            if (backspace) lastTextareaPrevWord.value = '';
+        } else if (lastTextareaPrevWord) {
+            focusPreviousTextarea(prevWordIndex, lastTextareaPrevWord.dataset.charIndex, backspace); // Recursively focus previous
         }
     }
 }

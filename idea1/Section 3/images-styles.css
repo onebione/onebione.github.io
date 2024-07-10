@@ -30,66 +30,82 @@ h1 {
 .gallery img:hover {
     transform: scale(1.05);
 }
+
 .letter-textarea {
-    width: 35px;  /* Width of the square */
-    height: 50px; /* Height of the square */
-    padding: 1px; 
-    border: 1px solid #000; /* Border of the textarea */
-    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
-    resize: none; /* Prevents the textarea from being resized */
+    width: 35px;
+    height: 50px;
+    padding: 1px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    resize: none;
     font-size: 35px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 15px;
     margin-right: 5px;
 }
+
 .sentence-seg {
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    justify-content: center; /* Centers elements horizontally */
-    align-items: center; /* Centers elements vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 .space {
     background-color: transparent;
-    color: transparent; /* Ensure text is also invisible */
-    display: inline-block; /* You can change this to block if needed */
-    width: 35px; /* Adjust width as needed */
-    height: 50px; /* Adjust height as needed */
+    color: transparent;
+    display: inline-block;
+    width: 35px;
+    height: 50px;
 }
+
 .SubmitButton {
-    background-color: #4CAF50; /* Background color */
-    color: white;              /* Text color */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Font family */
-    font-size: 20px;           /* Font size */
-    padding: 10px 20px;        /* Padding */
-    border: none;              /* Remove border */
-    border-radius: 5px;        /* Rounded corners */
-    cursor: pointer;           /* Cursor on hover */
+    background-color: #4CAF50;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     margin-top: 15px;
 }
 
 .SubmitButton:hover {
-    background-color: #45a549; /* Background color on hover */
+    background-color: #45a549;
 }
 
 .Title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 1px;
+    font-size: 50px;
 }
 
 .invalid-input {
     border: 2px solid red;
+    background-color: rgb(255, 203, 203);
 }
+
 .valid-input {
     border: 2px solid green;
+    background-color:rgb(195, 255, 195);
+    color: black; /* Ensure text color stays black */
 }
+
+/* Style for disabled valid inputs */
+.letter-textarea.valid-input:disabled {
+    color: black; /* Maintain black color for valid inputs */
+    background-color: rgb(195, 255, 195); /* Ensure background stays light green */
+}
+
 .word-span {
     display: flex;
 }
+
 @keyframes shake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
