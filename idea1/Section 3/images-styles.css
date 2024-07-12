@@ -75,7 +75,12 @@ h1 {
     margin-top: 15px;
 }
 
-.SubmitButton:hover {
+.SubmitButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.SubmitButton:hover:enabled {
     background-color: #45a549;
 }
 
@@ -92,14 +97,13 @@ h1 {
 
 .valid-input {
     border: 2px solid green;
-    background-color:rgb(195, 255, 195);
-    color: black; /* Ensure text color stays black */
+    background-color: rgb(195, 255, 195);
+    color: black;
 }
 
-/* Style for disabled valid inputs */
 .letter-textarea.valid-input:disabled {
-    color: black; /* Maintain black color for valid inputs */
-    background-color: rgb(195, 255, 195); /* Ensure background stays light green */
+    color: black;
+    background-color: rgb(195, 255, 195);
 }
 
 .word-span {
