@@ -1,4 +1,4 @@
-const sentence = "This is the sentence";
+const sentence = "This is sentence";
 
 function createElementsFromSentence(sentence) {
     const container = document.getElementById('textarea-container');
@@ -60,6 +60,9 @@ function addEventListeners() {
         event.preventDefault();
         validateFilledWords();
     });
+
+    const resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener('click', resetSentence);
 }
 
 function validateFilledWords() {
@@ -158,6 +161,11 @@ function checkAnyWordFilled() {
     });
 
     submitButton.disabled = !anyWordFilled;
+}
+
+function resetSentence() {
+    createElementsFromSentence(sentence);
+    addEventListeners();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
