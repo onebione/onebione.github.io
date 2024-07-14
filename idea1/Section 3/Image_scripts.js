@@ -1,4 +1,4 @@
-const sentence = "This is sentence";
+const sentence = "This is the sentence";
 
 function createElementsFromSentence(sentence) {
     const container = document.getElementById('textarea-container');
@@ -58,31 +58,39 @@ function addEventListeners() {
     const form = document.getElementById('textarea-form');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        validateSentence();
+        validateFilledWords();
     });
 }
 
-function validateSentence() {
-    sentence.split(' ').forEach((word, wordIndex) => {
-        const wordSpan = document.querySelector(`.word-span[data-word-index='${wordIndex}']`);
+function validateFilledWords() {
+    const wordSpans = Array.from(document.querySelectorAll('.word-span'));
+
+    wordSpans.forEach((wordSpan) => {
         const textareas = Array.from(wordSpan.querySelectorAll('.letter-textarea'));
+        const enabledTextareas = textareas.filter(ta => !ta.disabled);
+        const allFilled = enabledTextareas.every(ta => ta.value.length === 1);
 
-        textareas.forEach((textarea, charIndex) => {
-            const userChar = textarea.value;
-            const originalChar = word[charIndex];
+        if (enabledTextareas.length != 0 && allFilled) {
+            const wordIndex = wordSpan.dataset.wordIndex;
+            const word = sentence.split(' ')[wordIndex];
+            
+            textareas.forEach((textarea, charIndex) => {
+                const userChar = textarea.value;
+                const originalChar = word[charIndex];
 
-            if (userChar.toUpperCase() === originalChar.toUpperCase()) {
-                textarea.classList.remove('invalid-input', 'shake');
-                textarea.classList.add('valid-input');
-                textarea.disabled = true;
-            } else {
-                textarea.classList.add('invalid-input', 'shake');
-                textarea.classList.remove('valid-input');
-                textarea.addEventListener('animationend', () => {
-                    textarea.classList.remove('shake');
-                });
-            }
-        });
+                if (userChar.toUpperCase() === originalChar.toUpperCase()) {
+                    textarea.classList.remove('invalid-input', 'shake');
+                    textarea.classList.add('valid-input');
+                    textarea.disabled = true;
+                } else {
+                    textarea.classList.add('invalid-input', 'shake');
+                    textarea.classList.remove('valid-input');
+                    textarea.addEventListener('animationend', () => {
+                        textarea.classList.remove('shake');
+                    });
+                }
+            });
+        }
     });
 }
 
@@ -141,9 +149,10 @@ function checkAnyWordFilled() {
 
     wordSpans.forEach(wordSpan => {
         const textareas = Array.from(wordSpan.querySelectorAll('.letter-textarea'));
-        const allFilled = textareas.every(ta => ta.value.length === 1);
+        const enabledTextareas = textareas.filter(ta => !ta.disabled);
+        const allFilled = enabledTextareas.every(ta => ta.value.length === 1);
 
-        if (allFilled) {
+        if (enabledTextareas.length != 0 && allFilled) {
             anyWordFilled = true;
         }
     });
