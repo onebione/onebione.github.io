@@ -63,6 +63,11 @@ function addEventListeners() {
 
     const resetButton = document.getElementById('reset-button');
     resetButton.addEventListener('click', resetSentence);
+
+    const completeButton = document.getElementById('complete-button');
+    completeButton.addEventListener('click', () => {
+        completeSentence();
+    });
 }
 
 function validateFilledWords() {
@@ -166,6 +171,17 @@ function checkAnyWordFilled() {
 function resetSentence() {
     createElementsFromSentence(sentence);
     addEventListeners();
+}
+
+function completeSentence() {
+    const textareas = document.querySelectorAll('.letter-textarea');
+    textareas.forEach((textarea) => {
+        const wordIndex = textarea.dataset.wordIndex;
+        const charIndex = textarea.dataset.charIndex;
+        textarea.value = sentence.split(' ')[wordIndex][charIndex];
+        textarea.classList.add('valid-input');
+        textarea.disabled = true;
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

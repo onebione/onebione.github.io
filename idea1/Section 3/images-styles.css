@@ -9,6 +9,8 @@ body {
 h1 {
     color: black;
     padding: 20px 0;
+    margin: 0;
+    flex-grow: 1;
 }
 
 .gallery {
@@ -86,8 +88,11 @@ h1 {
 
 .Title {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 1px;
     font-size: 50px;
+    text-align: center;
+    flex-grow: 1;
+    text-align: center;
+    flex: 2;
 }
 
 .invalid-input {
@@ -123,10 +128,40 @@ h1 {
 }
 
 .reset-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
     background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
+.reset-button:hover {
+    background-color: #d32f2f;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.left-header, .right-header {
+    flex: 1;
+}
+
+.divider {
+    border: 1px solid #000;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.complete-button {
+    background-color: #008CBA;
     color: white;
     font-size: 16px;
     padding: 10px 20px;
@@ -136,6 +171,6 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.reset-button:hover {
-    background-color: #d32f2f;
+.complete-button:hover {
+    background-color: #005f73;
 }
