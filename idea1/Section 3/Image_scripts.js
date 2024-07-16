@@ -1,4 +1,4 @@
-const sentence = "This is sentence";
+const sentence = " A polar bear is catching fish";
 
 function createElementsFromSentence(sentence) {
     const container = document.getElementById('textarea-container');
