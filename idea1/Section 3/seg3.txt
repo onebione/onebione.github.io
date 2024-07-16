@@ -1,0 +1,11 @@
+My idea is that I can create a word game that does not need 3d modeling.
+
+- There will be an image
+- There will be a blank sentence template. -- e.g. - 'summer is hot' would be   _ _ _ _ _ _   _ _   _ _ _
+- The player has to type in a word, 
+    and if the word is correct it will show, 
+    but if it is incorrect, 
+    it won't show and a life will be lost,
+    there will be 4 lives
+
+if the word has a S ending, then just give that free to user. like 'worlds', then you show S from the start.

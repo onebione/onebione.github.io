@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+h1 {
+    color: black;
+    padding: 20px 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery img {
+    margin: 10px;
+    width: 300px;
+    height: auto;
+    border: 2px solid darkslategrey;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.letter-textarea {
+    width: 35px;
+    height: 50px;
+    padding: 1px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+
+.sentence-seg {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.space {
+    background-color: transparent;
+    color: transparent;
+    display: inline-block;
+    width: 35px;
+    height: 50px;
+}
+
+.SubmitButton {
+    background-color: #4CAF50;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.SubmitButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.SubmitButton:hover:enabled {
+    background-color: #45a549;
+}
+
+.Title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    flex-grow: 1;
+    text-align: center;
+    flex: 2;
+}
+
+.invalid-input {
+    border: 2px solid red;
+    background-color: rgb(255, 203, 203);
+}
+
+.valid-input {
+    border: 2px solid green;
+    background-color: rgb(195, 255, 195);
+    color: black;
+}
+
+.letter-textarea.valid-input:disabled {
+    color: black;
+    background-color: rgb(195, 255, 195);
+}
+
+.word-span {
+    display: flex;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
+.reset-button {
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
+.reset-button:hover {
+    background-color: #d32f2f;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.left-header, .right-header {
+    flex: 1;
+}
+
+.divider {
+    border: 1px solid #000;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.complete-button {
+    background-color: #008CBA;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.complete-button:hover {
+    background-color: #005f73;
+}
