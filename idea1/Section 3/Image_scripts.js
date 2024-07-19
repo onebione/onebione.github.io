@@ -1,4 +1,4 @@
-const sentence = "A buff man with a trident is fighting a shark";
+const sentence = " The beach is crowded on hot days";
 
 function createElementsFromSentence(sentence) {
     const container = document.getElementById('textarea-container');
