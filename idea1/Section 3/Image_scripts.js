@@ -1,4 +1,4 @@
-const sentence = "Walking inside candy land";
+const sentence = "Willy Wonka Walking inside a candy land";
 
 function createElementsFromSentence(sentence) {
     const container = document.getElementById('textarea-container');
