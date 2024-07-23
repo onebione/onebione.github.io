@@ -23,8 +23,17 @@ export function addEventListeners() {
                 }
                 event.preventDefault();
             } else if (textarea.value.length === 1 && event.key !== 'Backspace') {
+                textarea.value = event.key; // Replace the character with the new input
                 focusNextTextarea(wordIndex, charIndex);
+                event.preventDefault();
             }
+        });
+
+        textarea.addEventListener('input', function(event) {
+            if (textarea.value.length > 1) {
+                textarea.value = textarea.value.charAt(textarea.value.length - 1);
+            }
+            focusNextTextarea(textarea.dataset.wordIndex, textarea.dataset.charIndex);
         });
     });
 
