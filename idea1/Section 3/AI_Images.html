@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Sentence!</title>
+    <link rel="stylesheet" href="images-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="left-header">
+            <button id="reset-button" class="reset-button">&#x21BB; Reset</button>
+            <button id="HelpBtn" class="HelpBtn">?</button>
+            <div id="Help-Page" class="modal">
+                <div class="Help-content">
+                    <span class="closeBtn">&times;</span>
+                    <h1 class="Help-modal-title"> How To Play: </h1>
+                    <p> 
+                        There is an image. 
+                    </p>
+                    <p> 
+                        Your objective is to guess what the sentence is. 
+                    </p>
+                    <p>
+                        The sentence describes the image.
+                    </p>
+                    <P>
+                        It only checks words that are fully filled. 
+                    </P>
+                    <p>
+                        If the text boxes are green, you got the correct letter in the correct slot. 
+                    </p>
+                    <p>
+                        If it is red, that letter is not in that slot. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1 class="Title">Guess the Sentence!</h1>
+        <div class="right-header">
+            <button id="complete-button" class="complete-button"><i class="fas fa-check"></i> Answer</button>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="gallery">
+        <img src="c4d782dd-4b6c-42d5-8244-592002c5eca5.jpeg" alt="Image">
+    </div>
+    <form id="textarea-form">
+        <div class="sentence-seg" id="textarea-container"></div>
+        <button type="submit" class="SubmitButton">Submit</button>
+    </form>
+    <!-- Link the main JavaScript file -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
