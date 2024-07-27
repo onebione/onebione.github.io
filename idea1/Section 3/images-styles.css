@@ -151,8 +151,14 @@ h1 {
     padding: 10px;
 }
 
-.left-header, .right-header {
+.left-header {
     flex: 1;
+}
+
+.right-header {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .divider {
@@ -225,4 +231,14 @@ h1 {
 .Help-modal-title {
     align-self: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#lives-counter {
+    font-size: 25px;
+    color: #e74c3c; /* Red color for hearts */
+    margin-right: 20px;
+}
+
+#lives-counter .fa-heart {
+    margin: 0 2px;
 }
