@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "twin dragons blew fire all over a city";
+const sentence = "An explorer found a ghost town in the forest";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
