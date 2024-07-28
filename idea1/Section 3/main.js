@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "A Colossal squid emerged from the ocean and wrapped its tentacles around a ship during a storm";
+const sentence = "The planets are going to war";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
