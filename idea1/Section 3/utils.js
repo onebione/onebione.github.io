@@ -68,6 +68,7 @@ export function checkAnyWordFilled() {
 
 export function validateFilledWords() {
     const wordSpans = Array.from(document.querySelectorAll('.word-span'));
+    let invalidInputCount = 0;  // Track the number of invalid inputs
 
     wordSpans.forEach((wordSpan) => {
         const textareas = Array.from(wordSpan.querySelectorAll('.letter-textarea'));
@@ -92,8 +93,24 @@ export function validateFilledWords() {
                     textarea.addEventListener('animationend', () => {
                         textarea.classList.remove('shake');
                     });
+                    invalidInputCount++;  // Increment invalid input count
                 }
             });
         }
     });
+
+    if (invalidInputCount > 0) {
+        updateLivesCounter(invalidInputCount);
+    }
 }
+
+function updateLivesCounter(invalidInputCount) {
+    const livesCounter = document.getElementById('lives-counter');
+    const hearts = Array.from(livesCounter.getElementsByClassName('fas fa-heart'));
+
+    // for (let i = 0; i < invalidInputCount && hearts.length > 0; i++) {
+        const heart = hearts.pop();  // Remove a heart from the end
+        heart.classList.remove('fa-heart');
+        heart.classList.add('fa-heart-broken');
+    }
+// }

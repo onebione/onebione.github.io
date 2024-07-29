@@ -49,7 +49,6 @@ export function addEventListeners() {
     const completeButton = document.getElementById('complete-button');
     completeButton.addEventListener('click', completeSentence);
 }
-
 function completeSentence() {
     const textareas = document.querySelectorAll('.letter-textarea');
     textareas.forEach((textarea) => {
