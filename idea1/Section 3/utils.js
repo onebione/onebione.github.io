@@ -112,5 +112,20 @@ function updateLivesCounter(invalidInputCount) {
         const heart = hearts.pop();  // Remove a heart from the end
         heart.classList.remove('fa-heart');
         heart.classList.add('fa-heart-broken');
+        checkLives()
     }
 // }
+
+export function checkLives() {
+    const hearts = document.querySelectorAll('#lives-counter .fa-heart');
+    if (hearts.length === 0) {
+        setTimeout(() => {
+            showGOModal();
+        }, 500);
+    }
+}
+
+function showGOModal() {
+    const modal = document.getElementById('game-over-modal');
+    modal.style.display = 'block';
+}

@@ -1,3 +1,4 @@
+/* Base Styles  ------------------------------------------------------------------------------------------------ */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -13,6 +14,32 @@ h1 {
     flex-grow: 1;
 }
 
+/* Layout Styles ------------------------------------------------------------------------------------------------- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.left-header {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.right-header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.divider {
+    border: 1px solid #000;
+    width: 95%;
+    margin: 0 auto;
+}
+
 .gallery {
     display: flex;
     justify-content: center;
@@ -20,6 +47,17 @@ h1 {
     padding: 20px;
 }
 
+.sentence-seg {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Component Styles  -------------------------------------------------------------------------------------------------*/ 
 .gallery img {
     margin: 10px;
     width: 300px;
@@ -45,16 +83,6 @@ h1 {
     text-transform: uppercase;
     margin-bottom: 15px;
     margin-right: 5px;
-}
-
-.sentence-seg {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
 }
 
 .space {
@@ -95,38 +123,6 @@ h1 {
     flex: 2;
 }
 
-.invalid-input {
-    border: 2px solid red;
-    background-color: rgb(255, 203, 203);
-}
-
-.valid-input {
-    border: 2px solid green;
-    background-color: rgb(195, 255, 195);
-    color: black;
-}
-
-.letter-textarea.valid-input:disabled {
-    color: black;
-    background-color: rgb(195, 255, 195);
-}
-
-.word-span {
-    display: flex;
-}
-
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-}
-
-.shake {
-    animation: shake 0.3s;
-}
-
 .reset-button {
     background-color: #f44336;
     color: white;
@@ -142,29 +138,6 @@ h1 {
 
 .reset-button:hover {
     background-color: #d32f2f;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.left-header {
-    flex: 1;
-}
-
-.right-header {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.divider {
-    border: 1px solid #000;
-    width: 90%;
-    margin: 0 auto;
 }
 
 .complete-button {
@@ -228,6 +201,7 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
+
 .Help-modal-title {
     align-self: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -236,9 +210,65 @@ h1 {
 #lives-counter {
     font-size: 25px;
     color: #e74c3c; /* Red color for hearts */
-    margin-right: 20px;
+    margin-right: 40px;
+    width: 173px;
 }
 
 #lives-counter .fa-heart {
     margin: 0 2px;
+}
+
+.game-over-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.game-over-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* Utility Classes ------------------------------------------------------------------------------------------------- */
+.invalid-input {
+    border: 2px solid red;
+    background-color: rgb(255, 203, 203);
+}
+
+.valid-input {
+    border: 2px solid green;
+    background-color: rgb(195, 255, 195);
+    color: black;
+}
+
+.letter-textarea.valid-input:disabled {
+    color: black;
+    background-color: rgb(195, 255, 195);
+}
+
+.word-span {
+    display: flex;
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
+/* Keyframes ------------------------------------------------------------------------------------------------- */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
 }

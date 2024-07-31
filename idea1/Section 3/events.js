@@ -44,11 +44,16 @@ export function addEventListeners() {
     });
 
     const resetButton = document.getElementById('reset-button');
-    resetButton.addEventListener('click', resetSentence);
+    resetButton.addEventListener('click', () => {
+        resetSentence();
+    });
 
     const completeButton = document.getElementById('complete-button');
-    completeButton.addEventListener('click', completeSentence);
+    completeButton.addEventListener('click', () => {
+        completeSentence();
+    });
 }
+
 function completeSentence() {
     const textareas = document.querySelectorAll('.letter-textarea');
     textareas.forEach((textarea) => {
