@@ -1,17 +1,27 @@
 import { sentence } from './main.js';
 
 export function focusNextTextarea(wordIndex, charIndex) {
-    const nextCharIndex = parseInt(charIndex) + 1;
-    const nextTextarea = document.querySelector(`.letter-textarea[data-word-index='${wordIndex}'][data-char-index='${nextCharIndex}']`);
+    let nextCharIndex = parseInt(charIndex) + 1;
+    let nextWordIndex = parseInt(wordIndex);
 
-    if (nextTextarea) {
-        nextTextarea.focus();
-    } else {
-        const nextWordIndex = parseInt(wordIndex) + 1;
-        const firstTextareaNextWord = document.querySelector(`.letter-textarea[data-word-index='${nextWordIndex}'][data-char-index='0']`);
+    while (true) {
+        const nextTextarea = document.querySelector(`.letter-textarea[data-word-index='${nextWordIndex}'][data-char-index='${nextCharIndex}']`);
 
-        if (firstTextareaNextWord) {
-            firstTextareaNextWord.focus();
+        if (nextTextarea) {
+            if (!nextTextarea.disabled) {
+                nextTextarea.focus();
+                return;
+            } else {
+                nextCharIndex++;
+            }
+        } else {
+            nextWordIndex++;
+            nextCharIndex = 0;
+        }
+
+        // Break condition if no more textareas are found to avoid infinite loop
+        if (!document.querySelector(`.letter-textarea[data-word-index='${nextWordIndex}']`)) {
+            break;
         }
     }
 }
