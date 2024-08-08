@@ -18,20 +18,20 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    max-width: 98%;
-    width: 98%;
+    width: 100%;
+    max-width: 98%; /* Match the divider's width */
     margin: 0 auto;
     box-sizing: border-box; /* Include padding in the element's width */
-    position: relative; /* Ensure absolute positioning works within the container */
+    position: relative;
 }
 
 .Title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 50px;
     text-align: center;
-    position: absolute; /* Position it absolutely */
-    left: 50%; /* Move it to the center */
-    transform: translateX(-50%); /* Center it horizontally */
+    position: absolute; /* Center it within the header container */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .left-header, .right-header {
@@ -49,10 +49,11 @@ h1 {
 
 .divider {
     border: 1px solid #000;
-    width: 98%;
+    width: 98%; /* Consistent width with header */
     max-width: 98%;
     margin: 0 auto;
 }
+
 .gallery {
     display: flex;
     justify-content: center;
@@ -297,49 +298,41 @@ h1 {
     }
 }
 
-@media (max-width: 480px) {
+/* Media Query for Phones */
+@media (max-width: 600px) {
     .header-container {
-        flex-direction: column; /* Keep the header items in a column */
-        align-items: center;
-        padding: 5px;
-        width: 100%;
-    }
-
-    .left-header {
         flex-direction: column;
         align-items: center;
-        margin: 10px;
-        justify-content: center; /* Center align items in smaller screens */
-    }
-    .right-header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; /* Center align items in smaller screens */
+        padding: 10px;
+        max-width: 98%; /* Ensure max width matches the divider */
     }
 
     .Title {
-        font-size: 30px;
-        position: static;
+        position: relative;
+        left: 0;
         transform: none;
-    }
-
-    .Help-content, .game-over-modal-content {
-        width: 70%;
-    }
-
-    .SubmitButton {
+        margin-bottom: 10px;
         width: 100%;
-        padding: 15px;
     }
 
-    .reset-button, .HelpBtn {
+    .left-header, .right-header {
+        justify-content: center;
         width: 100%;
-        padding: 15px;
-        margin: 5px 0;
+        margin: 0;
+    }
+
+    /* Resize buttons and hearts on smaller screens */
+    .complete-button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 
     #lives-counter {
         font-size: 18px;
-        width: 90%;
+        margin-right: 10px;
+    }
+
+    #lives-counter .fa-heart {
+        margin: 0 1px;
     }
 }
