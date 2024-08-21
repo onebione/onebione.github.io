@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
     addEventListeners();
     initializeModal();
+    handicapFreebie();
 
     // Initially disable the submit button
     const submitButton = document.querySelector('.SubmitButton');

@@ -64,3 +64,18 @@ function completeSentence() {
         textarea.disabled = true;
     });
 }
+
+function handicapFreebie() {
+    const textareas = document.querySelectorAll('.letter-textarea');
+    textareas.forEach((textarea) => {
+        const wordIndex = textarea.dataset.wordIndex;
+        const charIndex = textarea.dataset.charIndex;
+        const x = sentence.split(' ')[wordIndex][charIndex];
+        if (x.toUpperCase() == 'A')
+        {
+          textarea.value = 
+          textarea.classList.add('valid-input');
+          textarea.disabled = true;
+        }
+    });
+}
