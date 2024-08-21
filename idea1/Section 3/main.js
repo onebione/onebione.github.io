@@ -1,5 +1,5 @@
 import { createElementsFromSentence, resetSentence } from './elements.js';
-import { addEventListeners } from './events.js';
+import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
 const sentence = "The happy guy plays as much as he studies";

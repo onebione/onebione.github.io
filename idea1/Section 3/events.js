@@ -65,7 +65,7 @@ function completeSentence() {
     });
 }
 
-function handicapFreebie() {
+export function handicapFreebie() {
     const textareas = document.querySelectorAll('.letter-textarea');
     textareas.forEach((textarea) => {
         const wordIndex = textarea.dataset.wordIndex;
