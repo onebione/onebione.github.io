@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "the galleon ship is definitely stuck on the beautiful tropical beach";
+const sentence = "a brutally modern architecture serves as a symbol of human hubris";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
