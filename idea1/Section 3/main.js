@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "insanely surreal oasis landscape is contained on the surface of a vase";
+const sentence = "a perfect personification of being fat and rich";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
