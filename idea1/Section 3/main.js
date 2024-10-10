@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "you get the best sleep when jabba embraces you dianna";
+const sentence = "Halloween is the only night she puts on a smile and comes out of the shadow";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
