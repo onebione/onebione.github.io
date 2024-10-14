@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "butterflies flutter into stardust as the sand of time never stops in the eternal hourglass";
+const sentence = "sweet honey drips down on the new queen as buzzing worker bees delight in the new era";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);

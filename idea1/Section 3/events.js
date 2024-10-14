@@ -72,7 +72,7 @@ export function handicapFreebie() {
         const charIndex = textarea.dataset.charIndex;
         const x = sentence.split(' ')[wordIndex][charIndex];
         const y = x.toUpperCase();
-        if ( y == 'E' || y == 'A' || y == 'T' || y == 'V' || y == 'O')
+        if ( y == 'E' || y == 'A' || y == 'T')
         {
           textarea.value = x;
           textarea.classList.add('valid-input');
