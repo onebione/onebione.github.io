@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "gangster gandolf gives balrog hell using the juiciest spell of them all";
+const sentence = "a book can transport you to a fantastic new world full of adventure";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
