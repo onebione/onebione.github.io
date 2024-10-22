@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "the kingdom of fowl is ready to lay waste to all enemies with their greatest weapon yet";
+const sentence = "back in the day, people living by the sea must think earthquakes are caused by turtles";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
