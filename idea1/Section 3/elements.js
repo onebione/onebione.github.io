@@ -32,6 +32,14 @@ export function createElementsFromSentence(sentence) {
 }
 
 export function resetSentence() {
-    createElementsFromSentence(sentence);
-    addEventListeners();
+    //createElementsFromSentence(sentence);
+    //addEventListeners();
+
+    const textareas = document.querySelectorAll('.letter-textarea');
+    textareas.forEach((textarea) => {
+        if (textarea.disabled == false)
+        {
+            textarea.value = ""
+        }
+    });
 }
