@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "the extraordinary gangster pigeon reflects the culture of the bustling city life";
+const sentence = "this horrible abomination reminds me of the darklord Voldemort";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
