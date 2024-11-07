@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "this horrible abomination reminds me of the darklord Voldemort";
+const sentence = "spongebob with his stand, the yellow submarine, is undefeated in the new era of Jojo bizarre adventures";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
