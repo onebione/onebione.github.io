@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "spongebob with his stand, the yellow submarine, is undefeated in the new era of Jojo bizarre adventures";
+const sentence = "A celestial being, disguised in mortal garb, their true form hidden beneath the folds of a dark cloak";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
