@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "A celestial being, disguised in mortal garb, their true form hidden beneath the folds of a dark cloak";
+const sentence = "do you think the paper bag lady sells bags?  does she make you curious?";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
