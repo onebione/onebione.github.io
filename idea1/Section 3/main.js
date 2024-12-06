@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "do you think the paper bag lady sells bags?  does she make you curious?";
+const sentence = "this cute baby owl is chilling in winter under a tiny mushroom deep in the magical forest";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
