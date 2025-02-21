@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "Broccoli, that glorious green champion of the vegetable kingdom, is so undeniably delicious and packed with vitamins that I'd happily devour a mountain of it, even if it meant I would be crushed under all its weight!!";
+const sentence = "Ethereal fungi, crystalline blooms, a symbiotic dance of nature's artistry, where earth and mineral intertwine in breathtaking beauty";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
