@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "A dark fairytale, in the style of Studio Ghibli, shows a serene yet eerie forest where a large, black creature stands, with a white cat and delicate flowers.";
+const sentence = "A miniature diorama shows people climbing a towering stack of cheese blocks, presented on a wooden board in the office";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
