@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "The gigachad, despite his muscular physique and chiseled chin, looked surprisingly comfortable in the maid dress, a testament to his confident embrace of cross-dressing";
+const sentence = "A decaying, fat, evil clown in a colorful top hat grins menacingly in a vibrant, dark fantasy";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
