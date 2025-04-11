@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "A cute, giddy furry anthropomorphic cat with pink hair and purple eyes waves from a pastel flower field, blushing and smiling adorably";
+const sentence = "An enchanting paper landscape captures an ancient setting with a watermill, houses, warm tones, and a blurred, golden, inviting space";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
