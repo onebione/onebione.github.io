@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "Against a striking yellow wall, a barefoot African woman moves with grace, a black plastic basin brimming with objects balanced on her head";
+const sentence = "In the quiet heart of the forest, the Hobbits stood close together, their smiles warm and unguarded, as dappled sunlight danced through the leaves above";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
