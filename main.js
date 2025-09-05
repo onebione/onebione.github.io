@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "Chaos surrounds, yet Grogu savors his meal peacefully, embodying calm resilience in the midst of destruction.";
+const sentence = "When America promised life, liberty, and the pursuit of happiness, this is exactly what they meant, pizza in one hand and Coke in the other";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
