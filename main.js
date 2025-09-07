@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "When America promised life, liberty, and the pursuit of happiness, this is exactly what they meant, pizza in one hand and Coke in the other";
+const sentence = "He swore to defend the Constitution and freedom... with a perfectly trimmed lawn";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
