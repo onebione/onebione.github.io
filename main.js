@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "Scientists said tardigrades could survive anything - but they never tested what would happen if Buddha rode one straight into nirvana";
+const sentence = "Instagram's true form revealed: a many-eyed beast that devours your time, attention, and mental health";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
