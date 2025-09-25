@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "a chubby soup dumpling creature is found spilling out its juicy savory fillings and trying to eat his share";
+const sentence = "O cruel jest of fate, to bind the gentle tortoise with the visage of the fiend";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
