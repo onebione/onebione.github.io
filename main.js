@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "the majestic gouda peacock is ever so snackable. He cuts the cheese and attracts both mates and mice";
+const sentence = "this adorable cross of cat and bee stuns the scientists with honey that smells of catnip and sounds of purring in flight";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
