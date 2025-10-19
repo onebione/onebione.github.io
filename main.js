@@ -2,7 +2,7 @@ import { createElementsFromSentence, resetSentence } from './elements.js';
 import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "this adorable cross of cat and bee stuns the scientists with honey that smells of catnip and sounds of purring in flight";
+const sentence = "the dill man ruined your sandwich in his awesome escape to seek revenge on all condiments";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
